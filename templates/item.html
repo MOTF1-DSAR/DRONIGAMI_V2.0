@@ -41,11 +41,14 @@
                 </div>
                 <div class="div-spacer-vertical"></div>
                 <div>
-                    <button id="openSurveyButton" class="app-button" style="font-size:22px;height:10vh;width:25vw;">Open Safety Checklist</button>
+                    <button id="openSkyVectorButton" class="app-button" style="font-size:22px;height:10vh;width:25vw;">Open SkyVector</button>
+                </d <button id="openSurveyButton" class="app-button" style="font-size:22px;height:10vh;width:25vw;">Open FRAT Safety Checklist</button>
                 </div>
                 <div class="div-spacer-vertical"></div>
                 <div class="div-display-horizontal">
                     <a href="www.something.com" id="flightRadarLink" style="font-size:28px;text-align:center">Open Flight Radar (ADS-B) Map</a>
+       
+                
                 </div>
                     <div class="div-spacer-vertical"></div>
             </div>
@@ -151,13 +154,27 @@
                 addButton()
 
             const checklistButton = document.getElementById("openSurveyButton")
-            const checklistPopup = document.getElementById("checklistPopup")
+               const skyvectorButton = document.getElementById("openSkyVectorButton")
+            const skyvectorPopup = document.getElementById("skyvectorPopup")
+             const checklistPopup = document.getElementById("checklistPopup")
             const checklistPopupBlur = document.getElementById("checklistPopupBlur")
             checklistButton.addEventListener("click", function() {
                 checklistPopup.classList.add("show");
                 checklistPopupBlur.classList.add("show");
                 setChecklist();
             })
+             skyvectorButton.addEventListener("click", function() {
+                skyvectorPopup.classList.add("show");
+                skyvectorPopupBlur.classList.add("show");
+                setChecklist();
+            })
+
+     const closeskyvectorButton = document.getElementById("closeskyvectorPopup")
+            closeskyvectorButton.addEventListener("click", function() {
+                skyvectorPopup.classList.remove("show");
+                skyvectorPopupBlur.classList.remove("show");
+            })
+            
             const closeChecklistButton = document.getElementById("closePopup")
             closeChecklistButton.addEventListener("click", function() {
                 checklistPopup.classList.remove("show");
